@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="ru.miti.webviewsberapi.ui.main.MainFragment"
+        android:label="@string/main_fragment">
+
+        <action
+            android:id="@+id/action_MainFragment_to_WebFragment"
+            app:destination="@id/WebFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WebFragment"
+        android:name="ru.miti.webviewsberapi.ui.main.MainFragment"
+        android:label="@string/fragment_web">
+    </fragment>
+
+</navigation>
