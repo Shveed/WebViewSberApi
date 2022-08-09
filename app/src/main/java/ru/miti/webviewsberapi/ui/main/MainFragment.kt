@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import ru.miti.webviewsberapi.R
 import ru.miti.webviewsberapi.databinding.MainFragmentBinding
 
 class MainFragment : Fragment() {
@@ -28,7 +30,7 @@ class MainFragment : Fragment() {
 
     private fun initView(binding: MainFragmentBinding) {
         binding.button.setOnClickListener {
-//            findNavController().navigate()
+            it.findNavController().navigate(R.id.action_mainFragment_to_webFragment)
         }
     }
 

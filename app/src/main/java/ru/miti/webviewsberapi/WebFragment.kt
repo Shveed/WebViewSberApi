@@ -20,6 +20,10 @@ class WebFragment : Fragment() {
         }
     }
 
+    private fun initView(binding: FragmentWebBinding) {
+        binding.webView.webViewClient
+    }
+
     companion object {
         @JvmStatic
         fun newInstance() = WebFragment()

@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/MainFragment">
+    app:startDestination="@id/mainFragment">
 
     <fragment
-        android:id="@+id/MainFragment"
+        android:id="@+id/mainFragment"
         android:name="ru.miti.webviewsberapi.ui.main.MainFragment"
-        android:label="@string/main_fragment">
+        android:label="@string/main_fragment"
+        tools:layout="@layout/main_fragment">
 
         <action
-            android:id="@+id/action_MainFragment_to_WebFragment"
-            app:destination="@id/WebFragment" />
+            android:id="@+id/action_mainFragment_to_webFragment"
+            app:destination="@id/webFragment" />
+
     </fragment>
 
     <fragment
-        android:id="@+id/WebFragment"
+        android:id="@+id/webFragment"
         android:name="ru.miti.webviewsberapi.ui.main.MainFragment"
         android:label="@string/fragment_web">
+
+        <action
+            android:id="@+id/action_WebFragment_to_MainFragment"
+            app:destination="@id/mainFragment" />
+
     </fragment>
 
 </navigation>
